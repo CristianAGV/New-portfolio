@@ -7,6 +7,7 @@ import {FaReact} from 'react-icons/fa'
 import {FaDatabase} from 'react-icons/fa'
 import {FaHtml5} from 'react-icons/fa'
 import Card from './Card'
+import Zoom from 'react-reveal/Zoom';
 const skillsData = [
     {
         name: 'Node Js',
@@ -46,9 +47,12 @@ function Skills() {
     return (
         <section className='section-container' id='skills'>
             <h2 className='section-title'>Skills I Have</h2>
-            <div className='skills-container'>
-                {skillsData.map(skill => <Card title={skill.name} icon={skill.icon} description={skill.description}/>)}
-            </div>
+            <Zoom bottom>
+                <div className='skills-container'>
+                    {skillsData.map((skill, index) => <Card title={skill.name} icon={skill.icon} description={skill.description} key={index}/>)}
+                </div>
+            </Zoom>
+            
         </section>
     )
 }

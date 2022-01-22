@@ -17,14 +17,14 @@ function Slider({projects}) {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    console.log(current)
+  
   return <div className='slider-container'>
       <FaArrowAltCircleLeft onClick={prevSlideHandler} className='leftArrow'/>
       {projects.map((project, index) => {
 
         return (  <div className={index === current ? 'slider-item active' : 'slider-item'} key={index}>
             { index === current && (<><img src={project.image}/>
-              <a href={project.link} target='_blank'><div className='slider-info-container'>
+              <a href={project.link} target='_blank' rel="noopener noreferrer"><div className='slider-info-container'>
               <div className='slider-info-content'>
                 <h3>Technologies used on this project:</h3>
                 <span>{project.technologies}</span>
