@@ -35,7 +35,7 @@ function Contact() {
                 <div className='form-column'>
                     <div className='form-input'>
                         <label htmlFor='name'>First Name</label>
-                        <input type='text'id='name'/>
+                        <input type='text'id='name' required/>
                     </div>
 
                     <div className='form-input'>
@@ -45,7 +45,7 @@ function Contact() {
 
                     <div className='form-input'>
                         <label htmlFor='email'>Email Adress</label>
-                        <input type='email' id='email'/>
+                        <input type='email' id='email' required/>
                     </div>
 
                     <input type='submit' value='Send' className='form-btn'/>
@@ -54,7 +54,7 @@ function Contact() {
                 <div className='form-column'>
                     <div className='form-input'>
                         <label htmlFor='message'>Your Message</label>
-                        <textarea id='message' rows='10' cols='25' name='message'></textarea>
+                        <textarea id='message' rows='10' cols='25' name='message' required></textarea>
                     </div>
                 </div>
             </form>
